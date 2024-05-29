@@ -1,6 +1,0 @@
-streamlit 
-pandas 
-scipy
-scikit-learn
-openpyxl
-XlsxWriter
