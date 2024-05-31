@@ -84,7 +84,7 @@ def calculate_dris_ibn(df, nutrients, response_variable):
             else:
                 Ea_den = (df_low_yield[numer] / df_low_yield[nutrient]).mean()
                 En_den = (df_high_yield[numer] / df_high_yield[nutrient]).mean()
-                s_den = (df_high_yield[nutrient]).std()
+                s_den = (df_high_yield[numer] / df_high_yield[nutrient]).std()
                 f_low = f_E_Ei(Ea_den, En_den, s_den)
                 f_low_total += f_low
 
@@ -193,7 +193,7 @@ if uploaded_file is not None:
                     else:
                         Ea_den = (df_high_yield[numer] / df_high_yield[nutrient])
                         En_den = (df_high_yield[numer] / df_high_yield[nutrient]).mean()
-                        s_den = (df_high_yield[nutrient]).std()
+                        s_den = (df_high_yield[numer] / df_high_yield[nutrient]).std()
                         f_low = f_E_Ei(Ea_den, En_den, s_den)
                         f_low_total += f_low
 
